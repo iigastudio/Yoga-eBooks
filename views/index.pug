@@ -1,0 +1,24 @@
+extends layout
+
+block content
+
+
+  .eBooks-container
+    each eBook in eBooks
+      .eBook-card
+        .eBook-info
+          .eBook-row
+            label Name:
+            a.eBook-name(href="/eBook/" + eBook._id) #{eBook.name}
+
+          .eBook-row
+            label Description:
+            p.eBook-description #{eBook.description}
+
+          .eBook-row
+            label Link:
+            a.eBook-link(href=eBook.link) click here
+
+          .eBook-row
+            label Level:
+            p.eBook-level #{eBook.level}

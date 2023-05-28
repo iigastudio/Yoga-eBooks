@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+  include partials/navbar
+  br
+
+  style
+    | body {
+    |   background-image: url('/images/Asanas.jpg');
+    |   min-height:100vh;
+    |   background-repeat: no-repeat;
+    |   background-size: cover;
+    |
+    | }
+
+  body
+    block content
+  br
+  br
+
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+script(type='text/javascript', src="/js/main.js")

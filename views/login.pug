@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    if errors
+        each error in errors 
+            p.error #{error.msg}
+
+                                          h1.login-title Login
+
+    form.login-form(method="POST", action="/users/login")
+
+        .form-group
+            label(for="email") Email:
+            input#email.form-control(name="email", type="text", required)
+
+        .form-group
+            label(for="password") Password:
+            input#password.form-control(name="password", type="password", required)
+
+        input.btn.btn-primary(type="submit", value="Submit")

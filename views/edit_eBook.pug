@@ -1,0 +1,33 @@
+extends layout 
+
+block content 
+    h1= eBook.title
+    form(method="POST" action="/eBook/edit/" + eBook._id)
+        #form-group 
+            label Name:
+            <br>
+            input.form-control(name="name" type="text" value=eBook.name)
+
+        #form-group 
+            label Description:
+            <br>
+            textarea.form-control(name="description", cols="25", rows="5")=eBook.description
+
+        #form-group 
+            label Link:
+            <br>
+            input.form-control(name="link" type="text" value=eBook.link)
+
+        #form-group 
+            label Level:
+            <br>
+            - var levelsArray = ['Beginner','Intermediate','Advanced']
+            select.form-control(name="level")
+                each level in levelsArray
+                    if (level == eBook.level)
+                        option(value=level selected) #{level}
+                    else
+                        option(value=level) #{level}
+                        
+        input.btn.btn-primary(type="submit" value="Submit")
+

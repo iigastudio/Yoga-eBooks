@@ -1,0 +1,14 @@
+nav.navbar
+  a.logo(href="/") Yoga eBooks
+  if user
+    ul.menu
+      li
+        a.logo.underline-link(href="/eBook/add") Add eBook
+      li
+        a.logo.underline-link(href="/users/logout") Logout
+  else
+    ul.menu
+      li
+        a.logo.underline-link(href="/users/register") Register
+      li
+        a.logo.underline-link(href="/users/login") Login

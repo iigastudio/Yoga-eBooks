@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .eBook-details-container
+    h2= eBook.name + ""
+    p
+      label Description: #{eBook.description}
+    p
+      label Posted by: #{posted_by}
+    p
+      label Link:
+      a(href=eBook.link) #{eBook.link}
+    p
+      label Level: #{eBook.level}
+    hr
+    if user
+      if user._id == eBook.posted_by
+        a.btn.btn-default(href="/eBook/edit/" + eBook._id) Edit eBook
+        br
+        a.btn.delete-eBook(href="#", data-id=eBook._id) Delete eBook
