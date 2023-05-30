@@ -4,17 +4,22 @@ block content
   .eBook-details-container
     h2= eBook.name + ""
     p
-      label Description: #{eBook.description}
+      p Description: #{eBook.description}
     p
-      label Posted by: #{posted_by}
-    p
-      label Link:
-      a(href=eBook.link) #{eBook.link}
-    p
-      label Level: #{eBook.level}
+      div.eBook-info-row
+        p.label Posted by:
+        p.value #{posted_by}
+    div.eBook-info-row
+      p.label Link:
+      p.value
+        a(href=eBook.link) #{eBook.link}
+    div.eBook-info-row
+      p.label Level:
+      p.value #{eBook.level}
     hr
     if user
       if user._id == eBook.posted_by
-        a.btn.btn-default(href="/eBook/edit/" + eBook._id) Edit eBook
+        a.btn.btn-default.edit-btn(href="/eBook/edit/" + eBook._id) Edit eBook
         br
-        a.btn.delete-eBook(href="#", data-id=eBook._id) Delete eBook
+        br
+        a.btn.btn-default.delete-btn(href="#", data-id=eBook._id) Delete eBook

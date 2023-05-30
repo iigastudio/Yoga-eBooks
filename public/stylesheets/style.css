@@ -11,9 +11,9 @@ a {
 
 form{
   display: grid;
-  background: #D3D3D3;
+  background: #f1f1f1;
   grid-gap: 2rem 0;
-  min-width: 160px;
+  min-width: 180px;
   align-content: left;
   justify-content: left;
   align-items: left;
@@ -48,10 +48,15 @@ h1{
 label{
   width: 75px;
   cursor: pointer;
+ white-space: nowrap;
   padding-right: 20px;
   align-self: top;
 }
-
+.eBook-description.collapsed {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .check{
   display: inline-block;
   height: 40px;
@@ -68,6 +73,7 @@ nav.navbar {
   background-color: #f1f1f1;
   padding: 10px;
   padding-block:25px;
+  padding-inline:25px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,6 +97,7 @@ ul.menu {
   margin: 0;
   padding: 0;
   display: flex;
+  gap:15px;
   align-items: center;
 }
 
@@ -118,6 +125,7 @@ ul.menu li:last-child {
 .eBook-row {
   display: flex;
   align-items: baseline;
+  gap:20px;
 }
 .eBooks-container {
   display: flex;
@@ -145,8 +153,46 @@ ul.menu li:last-child {
 .eBook-info {
   /* Add any additional CSS properties as needed for the eBook card layout */
 }
+.eBook-link-row {
+  display: flex;
+  align-items: center;
+
+}
+.eBook-info-row {
+   display: flex;
+   align-items: baseline;
+   margin-bottom: 10px;
+ }
+.eBook-details-container .btn {
+  font-size: 16px;
+  color:green;
+}
+ .eBook-info-row p.label {
+   flex-basis: 120px;
+   font-weight: bold;
+   color: #555;
+ }
+
+ .eBook-info-row p.value {
+   margin: 0;
+
+ }
+  .eBook-info-row p.value a{
+ color:green;
+    font-size:16px;
+  }
+
+.eBook-link-row label {
+  margin-right: 5px;
+
+}
+
+.eBook-link-row a {
+  text-decoration: none;
+  margin-bottom:5px;
+}
 .eBook-row label {
-  flex-basis: 120px;
+
   font-weight: bold;
   color: #555;
 }
@@ -157,9 +203,12 @@ ul.menu li:last-child {
   text-decoration: none;
   transition: color 0.3s ease;
 }
-
+select{
+padding:5px;
+width:175px;
+}
 .eBook-name:hover {
-  color: #f3727b;
+  color: green;
 }
 
 .eBook-description,
@@ -193,10 +242,11 @@ input[type="password"] {
 }
 
 input[type="submit"] {
-  width: 100%;
+  width: 175px;
   padding: 8px;
-  background-color: #4CAF50;
+  background-color: #aeaeae;
   color: white;
+  font-weight:bold;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -207,6 +257,6 @@ input[type="submit"]:hover {
 }
 
 p {
-  color: red;
+  color: #333;
 }
 
