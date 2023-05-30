@@ -1,8 +1,6 @@
 extends layout
 
 block content
-
-
   .eBooks-container
     each eBook in eBooks
       .eBook-card
@@ -13,7 +11,7 @@ block content
 
           .eBook-row
             label Description:
-            p.eBook-description #{eBook.description}
+            p.eBook-description.collapsed.expandable #{eBook.description}
 
           .eBook-row
             label Link:

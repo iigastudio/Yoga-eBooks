@@ -9,25 +9,21 @@ block content
     form(method="POST", action="/users/register")
         #form-group
             label Name:
-            br
             input.form-control(name="name", type="text")
             
 
         #form-group 
             label Email:
-            br
             input.form-control(name="email", type="text")
             
     
         #form-group 
             label Password:
-            br
             input.form-control(name="password", type="password")
             
 
         #form-group 
             label Confirm Password:
-            br
             input.form-control(name="confirm_password", type="password")
         
         input.btn.btn-primary(type="submit", value="Submit")

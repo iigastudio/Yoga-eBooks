@@ -24,4 +24,4 @@ let eBookSchema = mongoose.Schema({
 });
 
 
-let Video = module.exports = mongoose.model("eBook", eBookSchema);
+let Ebook = module.exports = mongoose.model("eBook", eBookSchema);
